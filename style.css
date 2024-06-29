@@ -1,0 +1,200 @@
+/* Globalización de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Letra */
+body {
+    background-color: rgb(0, 0, 0) !important;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+}
+
+/* barra de navegacion */
+.navbar {
+    background-color: #000000;
+    height: 80px;
+}
+
+.logo-img {
+    height: 60px; 
+    width: 150px; 
+    margin: 10px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.logo-img:hover {
+    filter: drop-shadow(0 0 20px rgba(53, 123, 131, 0.7));
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: rgb(255, 255, 255) !important;
+    font-weight: 500;
+    position: relative;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(53, 123, 131, 0.5), inset 0 0 10px rgba(53, 123, 131, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s, box-shadow 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: rgb(53, 123, 131) !important;
+    text-shadow: 0 0 10px rgba(53, 123, 131, 0.5);
+}
+
+.nav-link:hover::before, .nav-link.active::before {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(53, 123, 131, 0.7), inset 0 0 15px rgba(53, 123, 131, 0.3);
+}
+
+
+@media (max-width: 991px) {
+    .barra {
+        background-color: rgba(255, 255, 255, 0.15) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+}
+
+.redes-menu a i {
+    color: #fff !important;
+}
+
+
+ 
+/*- ia -*/
+.fondoia {
+    background: url(imagenes/IA.jpg) no-repeat center;
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+.fondoia::before {
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.fondoia .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+.fondoia h1 {
+    font-size: 70px;
+}
+
+/*- Intro -*/
+.custom-bg {
+    background-image: url('imagenes/IA1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    color: white;
+    margin: 100px;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    border: 5px solid rgba(53, 123, 131, 0.7); /* Borde suave */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 10px rgba(53, 123, 131, 0.7) inset; /* Sombra externa e interna */
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.custom-bg::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid rgba(53, 123, 131, 0.7); /* Borde luminoso */
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(53, 123, 131, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.custom-bg:hover::before {
+    opacity: 1;
+}
+
+
+/*- carrusel -*/
+.carousel-item {
+    position: relative;
+    height: 85vh;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.carousel-item video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: block;
+    opacity: 0;
+    transform: scale(0.95);
+}
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end,
+.carousel-item.active.carousel-item-start,
+.carousel-item.active.carousel-item-end {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+
+/*- footer -*/
+
+footer {
+    background-color: #000000 !important;
+    margin-top: 50px;
+}
+.logo-footer {
+    height: 450px;
+}
+footer h5 {
+    margin-bottom: 25px;
+}
+footer ul {
+    padding-left: 0;
+} 
+footer ul li {
+    margin-bottom: 0.5rem;
+} 
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+  
